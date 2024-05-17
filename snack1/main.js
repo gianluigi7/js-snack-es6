@@ -3,17 +3,17 @@
 const bici = [
     {
         nome: 'vincenzo',
-        peso: 20,
+        peso: 80,
 
     },
     {
         nome: 'Sipario',
-        peso: 30,
+        peso: 320,
 
     },
     {
         nome: 'Melchiorre',
-        peso: 90,
+        peso: 70,
 
     }
 ];
@@ -23,27 +23,20 @@ const bici = [
 
 
 let min = bici[0].peso;
-console.log(min);
-
-let i = 0;
 
 
-do {
 
-if (min > bici[i].peso) {
+for (let i = 1; i < bici.length; i++) {
 
-    min++;
-    i=0;
+ const biciattuale = bici[i].peso;
+
+ if (biciattuale.peso < min) {
+    min = biciattuale;
+
     
-    
-}else {
-    min = bici[i].peso;
 }
 
 
 
-
- i++;
-} while(min < bici[i][peso]);
-
+}
 console.log(min);

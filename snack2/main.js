@@ -21,25 +21,33 @@ const squadre = [
     }
 ];
 
-const newArray = [];
 
 for (let i = 0; i < squadre.length; i++) {
-
-
+    
+    
     const team = squadre[i];
     
-
+    
     team.falliSubiti = Math.floor(Math.random() *100);
     team.puntiFatti = Math.floor(Math.random() *100);
-
-    newArray.push(team.nome);
-    newArray.push(team.falliSubiti);
-    
-    console.log(newArray);
-    
     
 
-    for (let key in squadre) {
-        console.log(squadre[key]);
-    }
+    
+    
 }
+
+for (let key in squadre) {
+    console.log(squadre[key]);
+}
+
+const newArray = squadre.map((element, index, array) => {
+    
+    return {
+        nome: element.nome,
+        falliSubiti: Math.floor(Math.random() *100),
+        
+    }
+    
+    
+})
+console.log(newArray);
